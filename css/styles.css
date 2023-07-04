@@ -781,6 +781,7 @@ ul {
 }
 
 .modal-form {
+  gap: 24px;
 }
 
 .modal-field {
@@ -800,7 +801,7 @@ ul {
 }
 
 .input-wrap:focus {
-  /* border: var(--btn-color); */
+  border: var(--btn-color);
 }
 
 .form-input {
