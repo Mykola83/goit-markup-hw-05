@@ -5,6 +5,7 @@
   --btn-color: #4d5ae5;
   --btn-hover-color: #404bbf;
   --third-text-color: #f4f4fd;
+  --modal-text-color: #8e8f99;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -445,7 +446,6 @@ ul {
 
 .company-list {
   display: flex;
-  margin-bottom: 120px;
   gap: 24px;
 }
 
@@ -531,7 +531,7 @@ ul {
 .services-cover-text {
   position: absolute;
   background-color: var(--btn-color);
-  padding: 40px 32px; 
+  padding: 40px 32px;
   top: 0;
   left: 0;
   transform: translateY(100%);
@@ -545,6 +545,10 @@ ul {
 }
 
 .services-link:hover .services-cover-text {
+  transform: translateY(0);
+}
+
+.services-link:focus .services-cover-text {
   transform: translateY(0);
 }
 
@@ -632,6 +636,64 @@ ul {
   margin-bottom: 16px;
 }
 
+.form-footer {
+  width: 453px;
+  height: 80px;
+  margin-left: 80px;
+}
+
+.footer-form-element {
+  display: flex;
+}
+
+.subscribe-text {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-background-color);
+  margin-bottom: 16px;
+}
+
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--main-background-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--main-background-color);
+  padding-left: 16px;
+  margin-right: 24px;
+  align-items: center;
+}
+
+.subscribe-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--main-background-color);
+}
+
+.subscribe-btn {
+  display: flex;
+  min-width: 165px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 24px;
+  background-color: var(--btn-color);
+  color: var(--main-background-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-icon {
+  fill: var(--main-background-color);
+  margin-left: 16px;
+}
+
 /* МОДАЛЬНЕ ВІКНО */
 
 .backdrop {
@@ -652,10 +714,11 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition);
-  background: #fcfcfc;
+  background: var(--main-background-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 24px;
 }
 
 .modal-close-button {
@@ -705,4 +768,136 @@ ul {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-title {
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--second-text-color);
+  letter-spacing: 0.02em;
+  margin-top: 72px;
+  margin-bottom: 16px;
+}
+
+.modal-form {
+}
+
+.modal-field {
+  margin-bottom: 8px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.16;
+  color: var(--modal-text-color);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap:focus {
+  /* border: var(--btn-color); */
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--second-text-color);
+  border-radius: 4px;
+  padding-left: 34px;
+  padding-right: 16px;
+  font-size: 12px;
+  color: var(--modal-text-color);
+  outline: transparent;
+  transition: border-color var(--transition);
+}
+
+.form-input:focus {
+  border-color: var(--btn-color);
+}
+
+.input-icon {
+  fill: var(--second-text-color);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill var(--transition);
+}
+
+.form-input:focus + .input-icon {
+  fill: var(--btn-color);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--second-text-color);
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--modal-text-color);
+  outline: transparent;
+  transition: border-color var(--transition);
+}
+
+.modal-textarea:focus {
+  border-color: var(--btn-color);
+}
+
+.check-text {
+  font-size: 12;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--modal-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.check-text-link {
+  color: var(--btn-color);
+  text-decoration: underline;
+}
+
+.check-text span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--second-text-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--btn-hover-color);
+  border: none;
+  fill: var(--third-text-color);
+}
+
+.form-button {
+  display: block;
+  width: 169px;
+  height: 56px;
+  background-color: var(--btn-color);
+  border-radius: 4px;
+  border: none;
+  padding: 16px 32px;
+  font-weight: 500;
+  color: var(--main-background-color);
+  line-height: 1.5;
+  text-align: center;
+  margin: 24px auto;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px #00000026;
 }
