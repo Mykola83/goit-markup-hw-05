@@ -644,7 +644,7 @@ ul {
 
 .footer-form-element {
   display: flex;
-  gap: 24;
+  gap: 24px;
 }
 
 .subscribe-text {
@@ -694,6 +694,7 @@ ul {
   letter-spacing: 0.04em;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .send-icon {
@@ -791,7 +792,11 @@ ul {
 }
 
 .modal-field {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+}
+
+.check-field {
+  margin-bottom: 24px;
 }
 
 .form-label {
@@ -864,7 +869,7 @@ ul {
 }
 
 .check-text {
-  font-size: 12;
+  font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--modal-text-color);
