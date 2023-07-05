@@ -837,6 +837,7 @@ ul {
 
 .form-input:focus {
   border-color: var(--btn-color);
+  fill: var(--btn-color);
 }
 
 .input-icon {
