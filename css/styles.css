@@ -841,7 +841,7 @@ ul {
 }
 
 .input-icon {
-  fill: var(--second-text-color);
+  /* fill: var(--second-text-color); */
   position: absolute;
   left: 16px;
   top: 50%;
