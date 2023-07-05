@@ -578,12 +578,13 @@ ul {
 
 .footer {
   background-color: var(--second-text-color);
+  padding: 100px 0;
 }
 
 .footer-section {
   display: flex;
   align-items: baseline;
-  padding: 100px 0;
+
 }
 
 .logotype-footer {
@@ -664,7 +665,6 @@ ul {
   background-color: transparent;
   color: var(--main-background-color);
   padding-left: 16px;
-  margin-right: 24px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   align-items: center;
@@ -840,8 +840,11 @@ ul {
   fill: var(--btn-color);
 }
 
+.form-input:focus + .input-icon {
+  fill: var(--btn-color);
+}
+
 .input-icon {
-  /* fill: var(--second-text-color); */
   position: absolute;
   left: 16px;
   top: 50%;
@@ -880,8 +883,6 @@ border: none;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--modal-text-color);
-  display: flex;
-  align-items: center;
 }
 
 .label-policy-span {
@@ -904,18 +905,6 @@ border: none;
   text-decoration: underline;
 }
 
-/* .check-text span {
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--second-text-color);
-  border-radius: 2px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-}  */
-
 .input-check:checked + .label-policy-span {
   background-color: var(--btn-hover-color);
   border: none;
@@ -935,8 +924,9 @@ border: none;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  margin: 24px auto;
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px #00000026;
   transition: background-color var(--transition);
+ margin-left: auto;
+ margin-right: auto;
 }
