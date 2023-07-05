@@ -611,6 +611,9 @@ ul {
 .logotype-footer {
   /* margin-right: 120px; */
   margin: 0 auto;
+  display: block;
+text-align: center;
+
 }
 
 .footer-logo {
