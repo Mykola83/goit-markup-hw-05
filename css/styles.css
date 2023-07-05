@@ -850,9 +850,9 @@ ul {
 }
 
 .input-check:checked + .check-text > .label-policy-span {
-  border: none;
   background-color: var(--btn-hover-color);
-  fill: var(--main-background-color);
+border: none;
+  fill: var(--third-text-color);
 }
 
 .modal-textarea {
