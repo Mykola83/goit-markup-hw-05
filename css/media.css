@@ -255,17 +255,21 @@ ul {
 /* MISSION SECTION */
 
 .mission-section {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 16px;
 }
 
 .mission-container {
   display: flex;
   margin: 0 auto;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 72px;
+  flex-wrap: wrap;
 }
 
 .mission-container-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
+  width: 100%;
 }
 
 .visually-hidden {
@@ -282,14 +286,15 @@ ul {
 }
 
 .mission-icons {
-  display: flex;
-  width: 264px;
+  display: none;
+  /* display: flex; */
+  /* width: 264px;
   height: 112px;
   background: #f4f4fd;
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 8px; */
 }
 
 .list-title {
@@ -298,6 +303,7 @@ ul {
   letter-spacing: 0.02em;
   margin-bottom: 8px;
   color: var(--second-text-color);
+  text-align: center;
 }
 
 .list-paragraf {
@@ -305,6 +311,7 @@ ul {
 }
 
 .activity-section {
+  display: none;
   padding-bottom: 120px;
 }
 
@@ -328,14 +335,19 @@ ul {
   width: calc((100% - 48px) / 3);
 }
 
-.team-container {
-  display: flex;
-  gap: 24px;
-}
-
 .team-section {
   background-color: var(--third-text-color);
   padding: 120px 0;
+}
+
+.team-container {
+  display: flex;
+  /* gap: 24px; */
+  gap: 72px;
+  flex-wrap: wrap;
+  max-width: 428px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .team-title {
@@ -349,9 +361,11 @@ ul {
 }
 
 .team-item {
+  display: block;
+  max-width: 100%;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-background-color);
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -431,7 +445,8 @@ ul {
 /* CUSTOMERS */
 
 .customers {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 
 .customers-title {
@@ -446,12 +461,16 @@ ul {
 
 .company-list {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .company-label {
   height: 88px;
-  width: calc((100% - 120px) / 6);
+  /* width: calc((100% - 120px) / 6); */
+  width: calc((100% - 16px) / 2);
 }
 
 .company-icon-link {
@@ -582,18 +601,23 @@ ul {
 
 .footer-section {
   display: flex;
-  align-items: baseline;
-  padding: 100px 0;
+  justify-content: center;
+  /* align-items: baseline; */
+  padding: 100px 15px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .logotype-footer {
-  margin-right: 120px;
+  /* margin-right: 120px; */
+  margin: 0 auto;
 }
 
 .footer-logo {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 16px;
-  align-items: left;
+  /* align-items: center;
+  justify-content: center; */
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -612,6 +636,11 @@ ul {
   color: var(--third-text-color);
   letter-spacing: 0.02em;
 }
+
+/* .soc-footer {
+  display: flex;
+  flex-wrap: nowrap;
+} */
 
 .footer-soc-list {
   display: flex;
@@ -645,6 +674,7 @@ ul {
 .footer-form-element {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .subscribe-text {
@@ -848,10 +878,8 @@ ul {
   transition: fill var(--transition);
 }
 
-.input-check:checked + .check-text > .label-policy-span {
-  border: none;
-  background-color: var(--btn-hover-color);
-  fill: var(--main-background-color);
+.form-input:focus + .input-icon {
+  fill: var(--btn-color);
 }
 
 .modal-textarea {
@@ -903,18 +931,6 @@ ul {
   text-decoration: underline;
 }
 
-/* .check-text span {
-  width: 16px;
-  height: 16px;
-  border: 1px solid var(--second-text-color);
-  border-radius: 2px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-}  */
-
 .input-check:checked + .label-policy-span {
   background-color: var(--btn-hover-color);
   border: none;
@@ -939,3 +955,114 @@ ul {
   box-shadow: 0px 4px 4px 0px #00000026;
   transition: background-color var(--transition);
 }
+
+/* MEDIA */
+
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 396px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .mission-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .mission-container {
+    gap: 72px;
+  }
+
+  .mission-container-item {
+    max-width: 100%;
+    width: calc((100% - 24px) / 2);
+  }
+
+  .team-container {
+    max-width: 552px;
+    gap: 24px;
+
+  }
+
+  .team-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .company-list {
+    gap: 24px;
+  }
+
+  .company-label {
+    width: calc((100% - 48px) / 3);
+  }
+
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .mission-section {
+    padding: 120px 0;
+  }
+
+  .mission-container {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .mission-container-item {
+    max-width: unset;
+    width: calc((100% - 72px) / 4);
+  }
+
+  .mission-icons {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .list-title {
+    text-align: left;
+  }
+
+  .activity-section {
+    display: block;
+  }
+
+  .team-container {
+    flex-wrap: nowrap;
+      gap: 24px;
+  }
+
+  .company-list {
+    flex-wrap: nowrap;
+  }
+
+  .company-label {
+    width: calc((100% - 120px) / 6);
+  }
+}
+
+
+
+
+
+
+/*   
+
+Ширина блоків зафіксована, тому вони і не будуть звужуватися менше цієї ширини.
+Вас потрібно для блоків з іконками задати поза межами медіаправил display: none; а у медіаправилі min-width: 1158px задати display: flex;
+А для списку на планшеті (медіаправило min-width: 768px;) треба задати display: flex; flex-wrap: wrap;  для елементів списку ширину за допомогою calc().  А у медіаправилі для десктопа (min-width: 1158px) для списку задати flex-wrap: nowrap; для елементів списку ширину за допомогою calc() */
