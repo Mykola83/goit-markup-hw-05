@@ -53,16 +53,16 @@ ul {
 .header-container {
   display: flex;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-menu {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .header-contacts {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .header-navigation {
@@ -94,23 +94,80 @@ ul {
   list-style: none;
 }
 
-.header-menu-link {
-  display: flex;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--second-text-color);
-  padding-top: 24px;
-  padding-bottom: 24px;
-  transition: color var(--transition);
+/* MENU  */
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 22px;
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
 }
 
-.header-menu-link:hover {
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* width: 428px;
+height: 796px; */
+  top: 0;
+  z-index: 2;
+  padding: 40px;
+  background-color: var(--main-background-color);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+.menu-close-button {
+  display: flex;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #b5b7d8;
+  border-radius: 50%;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-close-icon {
+
+}
+.mob-menu {
+
+}
+.list {
+}
+
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-menu-link {
+  color: var(--second-text-color);
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11;
+letter-spacing: 0.72px;
+text-transform: capitalize;
+display: flex;
+transition: color var(--transition);
+}
+
+.mob-menu-link:hover {
   color: var(--btn-hover-color);
 }
 
-.header-menu-link:focus {
+.mob-menu-link:focus {
   color: var(--btn-hover-color);
 }
 
@@ -119,45 +176,71 @@ ul {
   color: var(--btn-hover-color);
 }
 
-.current::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: var(--btn-hover-color);
-  border-radius: 2px;
-  left: 0;
-  bottom: -1px;
+
+.link {
+}
+.current {
 }
 
-.address-decoration {
-  font-style: normal;
-  text-decoration: none;
-  margin-left: auto;
+.menu-adress {
+  
 }
 
-.contact-item {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+.menu-address-decoration {
+  
+}
+.menu-contacts {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.menu-mail-item {
   color: var(--main-text-color);
-  transition: color var(--transition);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  font-style: normal;
 }
 
-.contact-item:hover {
-  color: var(--btn-hover-color);
+.menu-tel-item {
+  color: var(--btn-color);
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11;
+letter-spacing: 0.72px;
+font-style: normal;
+text-transform: capitalize;
 }
 
-.contact-item:focus {
-  color: var(--btn-hover-color);
+.menu-soc-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: auto;
+  gap: 56px;
+}
+
+.soc-label {
+}
+.soc-item {
+}
+.soc-icon {
 }
 
 /* --------------------------MAIN */
 
 .main-title {
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
+  /* font-size: 56px; */
+  /* line-height: 1.07; */
+  /* letter-spacing: 0.02em; */
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
   text-align: center;
   max-width: 496px;
   margin: 0 auto;
@@ -171,11 +254,13 @@ ul {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  /* padding: 188px 0; */
+  max-width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
+  padding: 112px 0;
   margin: 0 auto;
 }
 
@@ -597,23 +682,22 @@ ul {
 
 .footer {
   background-color: var(--second-text-color);
+  padding: 96px 15px;
 }
 
 .footer-section {
   display: flex;
-  justify-content: center;
-  /* align-items: baseline; */
-  padding: 100px 15px;
+  align-items: baseline;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0 auto;
+ 
 }
 
 .logotype-footer {
-  /* margin-right: 120px; */
   margin: 0 auto;
   display: block;
-text-align: center;
-
+  text-align: center;
 }
 
 .footer-logo {
@@ -640,10 +724,10 @@ text-align: center;
   letter-spacing: 0.02em;
 }
 
-/* .soc-footer {
-  display: flex;
-  flex-wrap: nowrap;
-} */
+.soc-footer {
+  padding-top: 72px;
+  margin: 0 auto;
+}
 
 .footer-soc-list {
   display: flex;
@@ -666,16 +750,18 @@ text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-background-color);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .form-footer {
-  width: 453px;
-  height: 80px;
-  margin-left: 80px;
+  width: 100%;
+  height: auto;
+  padding-top: 72px;
 }
 
 .footer-form-element {
   display: flex;
+  flex-direction: column;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -686,10 +772,13 @@ text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-background-color);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .subscribe-input {
-  width: 264px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 40px;
   font-size: 12px;
   border: 1px solid var(--main-background-color);
@@ -697,11 +786,10 @@ text-align: center;
   background-color: transparent;
   color: var(--main-background-color);
   padding-left: 16px;
-  margin-right: 24px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  align-items: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  margin: 0 auto;
 }
 
 .subscribe-input::placeholder {
@@ -713,11 +801,11 @@ text-align: center;
 
 .subscribe-btn {
   display: flex;
-  min-width: 165px;
+  max-width: 165px;
   height: 40px;
   border: none;
   border-radius: 4px;
-  padding: 8px 24px;
+ 
   background-color: var(--btn-color);
   color: var(--main-background-color);
   font-family: "Roboto", sans-serif;
@@ -728,6 +816,7 @@ text-align: center;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .send-icon {
@@ -749,7 +838,8 @@ text-align: center;
 
 .modal {
   position: absolute;
-  width: 408px;
+  /* width: 408px; */
+  width: 392px;
   min-height: 584px;
   left: 50%;
   top: 50%;
@@ -759,7 +849,8 @@ text-align: center;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  /* padding: 72px 24px 24px 24px; */
+  padding: 72px 16px 24px 16px;
 }
 
 .modal-close-button {
@@ -873,6 +964,10 @@ text-align: center;
   fill: var(--btn-color);
 }
 
+.form-input:focus + .input-icon {
+  fill: var(--btn-color);
+}
+
 .input-icon {
   fill: var(--second-text-color);
   position: absolute;
@@ -911,8 +1006,6 @@ text-align: center;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--modal-text-color);
-  display: flex;
-  align-items: center;
 }
 
 .label-policy-span {
@@ -954,7 +1047,8 @@ text-align: center;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  margin: 24px auto;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px #00000026;
   transition: background-color var(--transition);
@@ -966,12 +1060,109 @@ text-align: center;
   .container {
     max-width: 396px;
   }
-
 }
+
+/* (min-width: 768px) */
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+
+  /* HEADER MENU */
+
+  .menu-btn {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-contacts {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .link {
+    text-decoration: none;
+  }
+
+  .list {
+    list-style: none;
+  }
+
+  .header-menu-link {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--second-text-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color var(--transition);
+  }
+
+  .header-menu-link:hover {
+    color: var(--btn-hover-color);
+  }
+
+  .header-menu-link:focus {
+    color: var(--btn-hover-color);
+  }
+
+  .current {
+    position: relative;
+    color: var(--btn-hover-color);
+  }
+
+  .current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--btn-hover-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -1px;
+  }
+
+  .address-decoration {
+    font-style: normal;
+    text-decoration: none;
+    margin-left: auto;
+  }
+
+  .contact-item {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    transition: color var(--transition);
+  }
+
+  .contact-item:hover {
+    color: var(--btn-hover-color);
+  }
+
+  .contact-item:focus {
+    color: var(--btn-hover-color);
+  }
+
+  /* HERO */
+
+  .main-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+  }
+
+  .hero {
+    padding: 188px 0;
   }
 
   .mission-section {
@@ -979,23 +1170,31 @@ text-align: center;
     padding-bottom: 96px;
   }
 
+  .list-title {
+    text-align: left;
+  }
+
   .mission-container {
-    gap: 72px;
+    gap: 24px;
   }
 
   .mission-container-item {
-    max-width: 100%;
+    width: unset;
     width: calc((100% - 24px) / 2);
+    flex-direction: row;
+    gap: 24px;
   }
 
   .team-container {
     max-width: 552px;
     gap: 24px;
-
   }
 
   .team-item {
     width: calc((100% - 24px) / 2);
+  }
+
+  .customers {
   }
 
   .company-list {
@@ -1006,11 +1205,79 @@ text-align: center;
     width: calc((100% - 48px) / 3);
   }
 
+  .soc-footer {
+    padding-top: 0;
+  }
+
+  .modal {
+    width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  .subscribe-text {
+    text-align: left;
+    margin-left: 108px;
+  }
+
+  .footer-section {
+ flex-direction: row;
+ gap: 24px;
+  }
+
+  .logotype-footer {
+    margin-left: 108px;
+ justify-content: center;
+ gap: 24px;
+  }
+
+  .footer-form-element {
+    flex-direction: row;
+    
+  }
+
+  .subscribe-input {
+    margin-left: 108px;
+    max-width: 264px;
+
+  }
+
+  .subscribe-btn {
+   gap: 24px;
+  }
+
+  .send-icon {
+    margin: 0;
+  }
+
 }
+
+/* (min-width: 1158px) */
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1440px;
+  }
+
+  .header-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header-contacts {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .main-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+  }
+
+  .hero {
+    max-width: 1440px;
+    padding: 188px 0;
   }
 
   .mission-section {
@@ -1048,7 +1315,7 @@ text-align: center;
 
   .team-container {
     flex-wrap: nowrap;
-      gap: 24px;
+    gap: 24px;
   }
 
   .company-list {
@@ -1058,15 +1325,48 @@ text-align: center;
   .company-label {
     width: calc((100% - 120px) / 6);
   }
+
+  .soc-footer {
+    padding-top: 96px;
+  }
+
+  .footer-section {
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    margin: 0 auto;
+  }
+
+  .logotype-footer {
+    min-width: 264px;
+max-height: 112px;
+    margin-right: 120px;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .footer-soc-list{
+    margin: 0 auto;
+  }
+
+ 
+    .form-footer {
+  
+      height: 80px;
+      margin-left: 120px;
+    }
+
+  
+  .footer-form-element {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+   
+  }
+
+  .subscribe-btn {
+    min-width: 165px;
+    margin-right: 0px;
+  }
 }
-
-
-
-
-
-
-/*   
-
-Ширина блоків зафіксована, тому вони і не будуть звужуватися менше цієї ширини.
-Вас потрібно для блоків з іконками задати поза межами медіаправил display: none; а у медіаправилі min-width: 1158px задати display: flex;
-А для списку на планшеті (медіаправило min-width: 768px;) треба задати display: flex; flex-wrap: wrap;  для елементів списку ширину за допомогою calc().  А у медіаправилі для десктопа (min-width: 1158px) для списку задати flex-wrap: nowrap; для елементів списку ширину за допомогою calc() */

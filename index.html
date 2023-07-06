@@ -18,8 +18,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <!-- <link rel="stylesheet" href="./css/media.css"/> -->
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -56,6 +56,108 @@
             </li>
           </ul>
         </address>
+        <button class="menu-btn" type="button" data-mobile-menu-open>
+          <svg class="menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu is-hidden" data-mobile-menu>
+        <button class="menu-close-button" type="button" data-mobile-menu-close >
+          <svg class="menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-closeblack"></use>
+          </svg>
+        </button>
+
+        <div>
+          <ul class="mob-menu list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link current" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+
+<div class="menu-adress">
+        <address class="menu-address-decoration">
+          <ul class="menu-contacts list">
+            <li>
+              <a class="menu-tel-item link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a class="menu-mail-item link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+      </div>
+
+        <ul class="menu-soc-list list">
+          <li class="soc-label">
+            <a
+              class="soc-item"
+              href=""
+              aria-label=""
+              target="_blank"
+              rel="nonopener noreferrer"
+            >
+              <svg class="soc-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-label">
+            <a
+              class="soc-item"
+              href=""
+              aria-label=""
+              target="_blank"
+              rel="nonopener noreferrer"
+            >
+              <svg class="soc-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-label">
+            <a
+              class="soc-item"
+              href=""
+              aria-label=""
+              target="_blank"
+              rel="nonopener noreferrer"
+            >
+              <svg class="soc-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-label">
+            <a
+              class="soc-item"
+              href=""
+              aria-label=""
+              target="_blank"
+              rel="nonopener noreferrer"
+            >
+              <svg class="soc-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -550,15 +652,19 @@
         <div class="form-footer">
           <p class="subscribe-text">Subscribe</p>
           <form class="footer-form-element" autocomplete="off">
-            <label class="footer-label" for="subscribe" aria-label="footer-email"> 
-            <input
-              class="subscribe-input"
-              type="email"
-              name="subscribe"
-              id="subscribe"
-              placeholder="E-mail"
-            />
-          </label>
+            <label
+              class="footer-label"
+              for="subscribe"
+              aria-label="footer-email"
+            >
+              <input
+                class="subscribe-input"
+                type="email"
+                name="subscribe"
+                id="subscribe"
+                placeholder="E-mail"
+              />
+            </label>
             <button class="subscribe-btn" type="submit">
               Subscribe
               <svg class="send-icon" width="24" height="24">
@@ -581,48 +687,55 @@
 
         <form class="modal-form" autocomplete="off">
           <div class="modal-field">
-            <label class="form-label" for="user-name">
-              Name
-            </label>
-              <div class="input-wrap">
-                <input class="form-input" type="text" name="user-name" id="user-name" />
-                <svg class="input-icon" width="18" height="24">
-                  <use href="./images/icons.svg#icon-person-black"></use>
-                </svg>
-              </div>
+            <label class="form-label" for="user-name"> Name </label>
+            <div class="input-wrap">
+              <input
+                class="form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-field">
-            <label class="form-label" for="user-phone">
-              Phone
-            </label>
-              <div class="input-wrap">
-                <input class="form-input" type="tel" name="user-phone" id="user-phone" />
-                <svg class="input-icon" width="18" height="24">
-                  <use href="./images/icons.svg#icon-phone-black"></use>
-                </svg>
-              </div>
+            <label class="form-label" for="user-phone"> Phone </label>
+            <div class="input-wrap">
+              <input
+                class="form-input"
+                type="tel"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-field">
-            <label class="form-label" for="user-email">
-              Email
-            </label>
-              <div class="input-wrap">
-                <input class="form-input" type="email" name="user-email" id="user-email" />
-                <svg class="input-icon" width="18" height="24">
-                  <use href="./images/icons.svg#icon-email-black"></use>
-                </svg>
-              </div>
+            <label class="form-label" for="user-email"> Email </label>
+            <div class="input-wrap">
+              <input
+                class="form-input"
+                type="email"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </div>
           </div>
           <div class="comment-field">
-            <label class="form-label" for="user-comment">
-              Comment
-            </label>
-              <textarea
-                class="modal-textarea"
-                name="user-comment"
-                id="user-comment"
-                placeholder="Text input"
-              ></textarea>
+            <label class="form-label" for="user-comment"> Comment </label>
+            <textarea
+              class="modal-textarea"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
           </div>
           <div class="check-field">
             <input
@@ -638,7 +751,7 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the 
+              I accept the terms and conditions of the
               <a class="check-text-link" href=""> Privacy Policy</a>
             </label>
           </div>
@@ -647,5 +760,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
